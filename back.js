@@ -78,4 +78,4 @@ function updateLocation() {
 }
 
 // Chama a função updateLocation a cada 15 segundos
-setInterval(updateLocation, 15000);
+setInterval(updateLocation, 5000);
