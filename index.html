@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <style>
+        /* Estilos para a div que contém o mapa */
+        .mapid {
+            height: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Estilos para o botão "Calcular distância" */
+        .distance-btn {
+            padding: 10px 20px;
+            background-color: #4286f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        /* Estilos para o áudio do alarme */
+        audio {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Comparação de localização</h1>
+    <div class="mapid" id="mapid" style="height: 500px;"></div>
+    <p>Clique no botão para calcular a distância entre sua localização atual e uma localização selecionada:</p>
+    <button class="distance-btn" onclick="getDistance()">Calcular distância</button>
+    <script src="back.js"></script>
+</body>
+
+</html>
