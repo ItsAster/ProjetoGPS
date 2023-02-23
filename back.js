@@ -75,6 +75,7 @@ navigator.geolocation.getCurrentPosition(function (location) {
 // Função para atualizar a posição do usuário a cada 15 segundos
 function updateLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
+    L.marker.getCurrentPosition([latlng]).update();
 }
 
 // Chama a função updateLocation a cada 15 segundos
