@@ -49,7 +49,7 @@ function showPosition(position) {
     const lon = position.coords.longitude;
     const distance = calcDistance(lat, lon, selectedLocation.getLatLng().lat, selectedLocation.getLatLng().lng);
 
-    console.log(`Distância: ${distance.toFixed(2)} km`);
+    document.getElementById("Distancia").innerHTML = (`Distância: ${distance.toFixed(2)} km`);
 
     // Verifique se a distância é igual a 1000 metros e toque um alarme se for
     if (distance * 1000 <= 1000) {
@@ -77,13 +77,11 @@ function updateLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
     navigator.geolocation.getCurrentPosition(function (location) {
         var latlng = [location.coords.latitude, location.coords.longitude];
-        if (latlng) {
-            mymap.removeLayer(latlng);
-        }
+        L.marker(latlng).addTo(mymap);
+       
    
     
     })   
 }   
-
 // Chama a função updateLocation a cada 15 segundos
 setInterval(updateLocation, 5000);
