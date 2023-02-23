@@ -1,7 +1,7 @@
 // Defina a localização selecionada como um objeto de coordenadas
 let selectedLocation = null;
 
-// Crie um mapa Leaflet e adicione um marcador para a localização selecionada
+// Cria um mapa Leaflet e adicione um marcador para a localização selecionada
 const mymap = L.map('mapid').setView([-15.779445, -47.884973], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -49,7 +49,7 @@ function showPosition(position) {
     const lon = position.coords.longitude;
     const distance = calcDistance(lat, lon, selectedLocation.getLatLng().lat, selectedLocation.getLatLng().lng);
 
-    alert(`Distância: ${distance.toFixed(2)} km`);
+    console.log(`Distância: ${distance.toFixed(2)} km`);
 
     // Verifique se a distância é igual a 1000 metros e toque um alarme se for
     if (distance * 1000 <= 1000) {
