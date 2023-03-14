@@ -49,7 +49,7 @@ function showPosition(position) {
     const lon = position.coords.longitude;
     const distance = calcDistance(lat, lon, selectedLocation.getLatLng().lat, selectedLocation.getLatLng().lng);
 
-    document.getElementById("Distancia").innerHTML = (`Distância: ${distance.toFixed(2)} km`);
+    document.getElementById("Distancia").innerHTML = (`Distância: ${distance.toFixed (2)} km`);
 
     // Verifique se a distância é igual a 1000 metros e toque um alarme se for
     if (distance * 1000 <= 1000) {
